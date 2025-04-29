@@ -1,5 +1,4 @@
-
-<VAST version="4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<VAST version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Ad id="nonlinear-html-video-image">
     <InLine>
       <AdSystem>ExampleAdServer</AdSystem>
