@@ -1,14 +1,16 @@
 <VAST
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="vast.xsd" version="3.0">
-	<Ad id="000000001">
+	<script/>
+	<Ad id="1234567">
 		<InLine>
-			<AdSystem>RMP</AdSystem>
-			<AdTitle>Inline non-linear PNG image</AdTitle>
-			<Description>
-				<![CDATA[ Test adTag for Radiant Media Player - inline non-linear VAST 3 PNG image ]]>
-			</Description>
+			<AdSystem/>
+			<AdTitle>NonLinear VPAID Countdown</AdTitle>
+			<Description>Vpaid NonLinear Countdown Ad</Description>
+			<Impression>
+				<![CDATA[ https://stories-api.90d.io/api/v2/tracks?event=impression&ad_id=1234567 ]]>
+			</Impression>
 			<Creatives>
-				<Creative id="00000000001" sequence="1">
+				<Creative sequence="1">
 					<NonLinearAds>
 						<TrackingEvents>
 							<Tracking event="firstQuartile">
@@ -24,12 +26,79 @@
 								<![CDATA[ https://stories-api.90d.io/api/v2/tracks?event=complete&ad_id=1234567 ]]>
 							</Tracking>
 						</TrackingEvents>
-						<NonLinear id="RMP" width="480" height="70" minSuggestedDuration="00:00:05" scalable="true" maintainAspectRatio="true">
-							<StaticResource creativeType="image/png">
-								<![CDATA[ https://www.radiantmediaplayer.com/vast/mp4s/image.png ]]>
-							</StaticResource>
-							<NonLinearClickThrough>
-								<![CDATA[ https://stories-api.90d.io ]]>
+						<NonLinear apiFramework="VPAID" minSuggestedDuration="00:00:05" width="300" height="60" id="overlay-1">
+							<AdParameters>
+								<![CDATA[
+                  {
+                    "isSkippable": true,
+                    "overlays": [
+                      {
+                        "imageUrl": "https://cdn.90d.io/nd/nbrand-19148356-e16b-4b0a-932e-6fd1c3e01c3e/thumb_90dfs_frame_upload_nsULGuoX.jpg",
+                        "clickThrough": "https://www.autoadvantage.net/inventory/honda/accord/ray7/",
+                        "productName": "2019 Toyota Corolla",
+                        "productCode": "VIN: 1HGCM82633A001234",
+                        "availability": "Available as of: 20/2/25",
+                        "price": "$14,358"
+                      },
+                      {
+                        "imageUrl": "https://cdn.90d.io/nd/nbrand-19148356-e16b-4b0a-932e-6fd1c3e01c3e/thumb_90dfs_frame_upload_CAF8_KSO.jpg",
+                        "clickThrough": "https://www.autoadvantage.net/inventory/infiniti/m/20797r/",
+                        "productName": "2002 Porsche Boxster",
+                        "productCode": "VIN: 1EFGM82633A001234",
+                        "availability": "Available as of: 20/2/25",
+                        "price": "$12,306"
+                      },
+                      {
+                        "imageUrl": "https://cdn.90d.io/nd/nbrand-19148356-e16b-4b0a-932e-6fd1c3e01c3e/thumb_90dfs_frame_upload_OglwNMW3.jpg",
+                        "clickThrough": "https://www.autoadvantage.net/inventory/volkswagen/passat/%2320879/",
+                        "productName": "2021 Kia Rio",
+                        "productCode": "VIN: 3KPA24AB3LE234567",
+                        "availability": "Available as of: 20/2/25",
+                        "price": "$13,580"
+                      }
+                    ],     
+                    "productDetailsFont": "Arial",
+                    "productDetailsFontSize": "14",
+                    "productDetailsFontStyle": "normal",
+                    "productDetailsFontColor": "black",
+                    "productNameFont": "Arial",
+                    "productNameFontSize": "18",
+                    "productNameFontStyle": "bold",
+                    "productNameColor": "black",
+                    "priceFont": "Arial",
+                    "priceFontSize": "28",
+                    "priceFontStyle": "bold",
+                    "priceFontColor": "red",
+                    "website": "Myautoadvantage.com",   
+                    "websiteColor": "white",
+                    "websiteBackgroundColor": "#CC0000",
+                    "websiteFontSize": "14",
+                    "websiteFontStyle": "normal",            
+                    "websiteFont" : "Arial",
+                    "bottomImageUrl": "https://d2x7d5ww1bo448.cloudfront.net/nd/nbrand-9b34dedc-60c2-4af8-8921-64570a58d7cc/thumb_90dfs_frame_upload_Ez1XwwYP.png",
+                    "address": "Address: 5998 Ashevill Hwy, Hendersonville, NC 28791",
+                    "addressColor": "white",
+                    "addressBackgroundColor": "#FF0000",
+                    "addressFontSize": "14",
+                    "addressFontStyle": "normal",
+                    "addressFont" : "Arial",
+                    "videos": [
+                      {
+                        "url": "https://github.com/prashant-lf/destiny/raw/refs/heads/main/dv360_compliant_video.mp4",
+                        "mimetype": "video/mp4"
+                      }
+                    ],
+                    "carouselInterval": 5,
+                    "carouselStartDelay": 4,
+                    "carouselEnd": 4
+                  }
+                ]]>
+							</AdParameters>
+							<MediaFiles>
+								<MediaFile delivery="progressive" type="application/javascript" apiFramework="VPAID" width="1280" height="720">https://rinichandra-lf.github.io/test-repo/autovantageOverlays.js</MediaFile>
+							</MediaFiles>
+							<NonLinearClickThrough id="GDFP">
+								<![CDATA[ https://google.com ]]>
 							</NonLinearClickThrough>
 						</NonLinear>
 					</NonLinearAds>

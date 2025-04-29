@@ -1,0 +1,53 @@
+
+<VAST version="4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Ad id="nonlinear-html-video-image">
+    <InLine>
+      <AdSystem>ExampleAdServer</AdSystem>
+      <AdTitle>HTML Overlay Video + Image</AdTitle>
+      <Impression><![CDATA[https://example.com/impression-tracker]]></Impression>
+
+      <Creatives>
+        <Creative sequence="1" id="html-overlay">
+          <NonLinearAds>
+            <NonLinear width="640" height="150" scalable="true" maintainAspectRatio="true" minSuggestedDuration="00:00:15">
+              <HTMLResource><![CDATA[
+                <html>
+                  <body style="margin:0; padding:0; width:100%; height:100%;">
+                    <div style="
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      width: 100%;
+                      height: 100%;
+                      background-color: #000;
+                    ">
+                      <div style="display: flex; flex-direction: row;">
+                        <video width="340" height="400" controls autoplay muted style="background:#000;">
+                          <source src="https://d2x7d5ww1bo448.cloudfront.net/nd/nbrand-9b34dedc-60c2-4af8-8921-64570a58d7cc/original_90dfs_frame_upload_E0EK3i7y.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                        <a href="https://example.com/clickthrough" target="_blank">
+                          <img src="https://www.radiantmediaplayer.com/vast/mp4s/image.png" width="240" height="300" alt="Ad Banner" />
+                        </a>
+                      </div>
+                    </div>
+                  </body>
+                </html>
+              ]]></HTMLResource>
+
+              <NonLinearClickThrough>
+                <![CDATA[https://example.com/clickthrough]]>
+              </NonLinearClickThrough>
+              <AdParameters><![CDATA[custom=param]]></AdParameters>
+            </NonLinear>
+
+            <TrackingEvents>
+              <Tracking event="creativeView"><![CDATA[https://example.com/tracking/view]]></Tracking>
+              <Tracking event="acceptInvitation"><![CDATA[https://example.com/tracking/invite]]></Tracking>
+            </TrackingEvents>
+          </NonLinearAds>
+        </Creative>
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>
